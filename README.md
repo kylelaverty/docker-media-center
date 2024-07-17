@@ -4,10 +4,11 @@
 
 ## Services
 
-| Service                                     | Purpose | Description                                        |
-| ------------------------------------------- | ------- | -------------------------------------------------- |
-| [gluetun](https://github.com/qdm12/gluetun) | VPN     | OpenVPN client with DNS and firewall configuration |
-| [qbittorrent](https://www.qbittorrent.org/) | Torrent | Torrent client                                     |
+| Service                                          | Purpose | Description                                        |
+| ------------------------------------------------ | ------- | -------------------------------------------------- |
+| [gluetun](https://github.com/qdm12/gluetun)      | VPN     | OpenVPN client with DNS and firewall configuration |
+| [qbittorrent](https://www.qbittorrent.org/)      | Torrent | Torrent client                                     |
+| [watchtower](https://containrrr.dev/watchtower/) | Support | Automatic container updates                        |
 
 ## Requirements
 

@@ -1,0 +1,14 @@
+services:
+  # Watchtower is a process for automating Docker container base image updates
+  # https://containrrr.dev/watchtower/
+  # Root Image: ???
+  watchtower:
+    image: containrrr/watchtower:latest
+    container_name: watchtower
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - TZ=${TIMESONE}
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_LABEL_ENABLE=true

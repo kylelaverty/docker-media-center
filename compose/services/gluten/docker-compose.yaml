@@ -24,3 +24,5 @@ services:
       - OPENVPN_PASSWORD=${VPN_PASSWORD}
       - OPENVPN_CIPHERS=AES-256-GCM
       - SERVER_REGIONS=${VPN_REGIONS}
+    labels:
+      - com.centurylinklabs.watchtower.enable=true
