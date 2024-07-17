@@ -6,14 +6,19 @@
 
 ### Services Summary
 
-| Service                                          | Purpose | Description                                        |
-| ------------------------------------------------ | ------- | -------------------------------------------------- |
-| [gluetun](https://github.com/qdm12/gluetun)      | VPN     | OpenVPN client with DNS and firewall configuration |
-| [qbittorrent](https://www.qbittorrent.org/)      | Torrent | Torrent client                                     |
-| [portainer](https://www.portainer.io/)           | Support | Docker management                                  |
-| [watchtower](https://containrrr.dev/watchtower/) | Support | Automatic container updates                        |
+| Service                                                                        | Purpose | Description                                        |
+| ------------------------------------------------------------------------------ | ------- | -------------------------------------------------- |
+| [Docker Socket Proxy](https://docs.linuxserver.io/images/docker-socket-proxy/) | Proxy   | Protect Docker socket with a proxy                 |
+| [Qluetun](https://github.com/qdm12/gluetun)                                    | VPN     | OpenVPN client with DNS and firewall configuration |
+| [Qbittorrent](https://www.qbittorrent.org/)                                    | Torrent | Torrent client                                     |
+| [Portainer](https://www.portainer.io/)                                         | Support | Docker management                                  |
+| [Watchtower](https://containrrr.dev/watchtower/)                               | Support | Automatic container updates                        |
 
 ### Services Details
+
+#### Docker Socket Proxy
+
+Docker Socket Proxy is a service that protects the Docker socket with a proxy. It is used to prevent unauthorized access to the Docker socket.
 
 #### Gluetun
 
@@ -30,6 +35,12 @@ Portainer is a web-based Docker management tool that allows you to manage your D
 #### Watchtower
 
 Watchtower is a service that automatically updates the running Docker containers. Which container is updated can be controlled by the `com.centurylinklabs.watchtower.enable` label in the service's `docker-compose.yml` file.
+
+## Internal Networks
+
+| Network      | Subnet          | Description                            |
+| ------------ | --------------- | -------------------------------------- |
+| socket_proxy | 192.168.91.0/24 | Socket proxy network to protect Docker |
 
 ## Endpoints
 

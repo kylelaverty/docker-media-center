@@ -4,11 +4,18 @@
 networks:
   default:
     driver: bridge
+  socket_proxy:
+    name: socket_proxy
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.91.0/24
 
 #===============================================================================
 # Included services
 #===============================================================================
 include:
+  - ./services/socket-proxy/docker-compose.yaml
   - ./services/gluten/docker-compose.yaml
   - ./services/qbittorrent/docker-compose.yaml
   - ./services/watchtower/docker-compose.yaml
