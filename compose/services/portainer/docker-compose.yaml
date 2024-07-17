@@ -6,14 +6,14 @@ services:
     image: portainer/portainer-ce:latest
     container_name: portainer
     restart: unless-stopped
-    command:
-      - '--admin-password-file=/run/secrets/portainer_admin_password'
-      - '--http-enabled'
-      - '--no-analytics'
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - socket_proxy
+    command: -H tcp://socket-proxy:2375 --admin-password-file=/run/secrets/portainer_admin_password --http-enabled
     ports:
       - 9000:9000 # HTTP UI
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
       - ${INSTALL_DIR}/compose/services/portainer/config:/data
     environment:
       - TZ=${TIMESONE}
