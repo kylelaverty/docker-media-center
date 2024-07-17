@@ -16,7 +16,7 @@ services:
       - 8388:8388/udp # Shadowsocks
       - 8080:8080/tcp # gluetun
     volumes:
-      - ${INSTALL_DIR}/compose/service/gluten/config:/config
+      - ${INSTALL_DIR}/compose/services/gluten/config:/config
     environment:
       - VPN_SERVICE_PROVIDER=${VPN_SERVICE}
       - VPN_TYPE=openvpn
