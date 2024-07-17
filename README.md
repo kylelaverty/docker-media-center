@@ -10,6 +10,7 @@
 | ------------------------------------------------------------------------------ | ------- | -------------------------------------------------- |
 | [Docker Socket Proxy](https://docs.linuxserver.io/images/docker-socket-proxy/) | Proxy   | Protect Docker socket with a proxy                 |
 | [Qluetun](https://github.com/qdm12/gluetun)                                    | VPN     | OpenVPN client with DNS and firewall configuration |
+| [Jellyfin](https://jellyfin.org/)                                              | Media   | Media server                                       |
 | [Qbittorrent](https://www.qbittorrent.org/)                                    | Torrent | Torrent client                                     |
 | [Portainer](https://www.portainer.io/)                                         | Support | Docker management                                  |
 | [Dozzle](https://dozzle.dev/)                                                  | Support | Real-time log viewer                               |
@@ -24,6 +25,10 @@ Docker Socket Proxy is a service that protects the Docker socket with a proxy. I
 #### Gluetun
 
 Gluetun is a VPN client that supports OpenVPN. You can change the VPN provider by updating the `VPN_PROVIDER` environment variable in the `.env` file.
+
+#### Jellyfin
+
+Jellyfin is a media server that allows you to organize and stream your media files. You can access the web interface at `http://localhost:8096`. It will be used to stream media files to your devices.
 
 #### Qbittorrent
 
@@ -45,6 +50,7 @@ Watchtower is a service that automatically updates the running Docker containers
 
 | Network      | Subnet          | Description                            |
 | ------------ | --------------- | -------------------------------------- |
+| default      | --              | Default network for Docker containers  |
 | socket_proxy | 192.168.91.0/24 | Socket proxy network to protect Docker |
 
 ## Endpoints
@@ -54,6 +60,7 @@ Watchtower is a service that automatically updates the running Docker containers
 | Portainer   | http://localhost:9000 |
 | Qbittorrent | http://localhost:8080 |
 | Dozzle      | http://localhost:8081 |
+| Jellyfin    | http://localhost:8096 |
 
 ## Requirements
 

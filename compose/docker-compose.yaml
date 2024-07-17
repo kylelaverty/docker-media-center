@@ -15,9 +15,12 @@ networks:
 # Included services
 #===============================================================================
 include:
+  # CORE
   - ./services/socket-proxy/docker-compose.yaml
   - ./services/gluten/docker-compose.yaml
-  - ./services/qbittorrent/docker-compose.yaml
   - ./services/watchtower/docker-compose.yaml
   - ./services/portainer/docker-compose.yaml
   - ./services/dozzle/docker-compose.yaml
+  # MEDIA
+  - ./services/jellyfin/docker-compose.yaml
+  - ./services/qbittorrent/docker-compose.yaml

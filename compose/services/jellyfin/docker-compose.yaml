@@ -1,0 +1,27 @@
+services:
+  # Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.
+  jellyfin:
+    image: linuxserver/jellyfin:latest
+    container_name: jellyfin
+    restart: "no"
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - default
+    #user: $PUID:$PGID
+    devices:
+      - /dev/dri:/dev/dri # for harware transcoding
+    ports:
+      - "8096:8096" # HTTP port
+      - "8920:8920" # HTTPS port
+    volumes:
+      - ${INSTALL_DIR}/compose/services/jellyfin/config:/config
+      - ${MOVIE_DIR}:/data/movies
+      - ${TV_DIR}:/data/tv
+      - ${DOWNLOADS_DIR}:/data/downloads
+      - /dev/shm:/data/transcode # Offload transcoding to RAM if you have enough RAM
+    environment:
+      - UMASK_SET=022
+      - TZ=${TIMESONE}
+    labels:
+      - com.centurylinklabs.watchtower.enable=true
