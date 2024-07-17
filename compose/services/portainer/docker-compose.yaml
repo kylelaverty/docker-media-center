@@ -1,0 +1,23 @@
+services:
+  # Portainer is a lightweight management UI which allows you to easily manage your Docker host or Swarm cluster
+  # https://www.portainer.io/
+  # Root Image: ???
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    restart: unless-stopped
+    command:
+      - '--admin-password-file=/run/secrets/portainer_admin_password'
+      - '--http-enabled'
+      - '--no-analytics'
+    ports:
+      - 9000:9000 # HTTP UI
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${INSTALL_DIR}/compose/services/portainer/config:/data
+    secrets:
+      - portainer_admin_password
+
+secrets:
+  portainer_admin_password:
+    file: ./secrets/portainer_admin_password
