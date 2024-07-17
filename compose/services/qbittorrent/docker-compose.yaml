@@ -1,0 +1,16 @@
+services:
+  # qBitorrent is used to download torrents
+  # Root Image: Alpine Linux
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    restart: unless-stopped
+    network_mode: "service:gluetun"
+    volumes:
+      - ${DOWNLOADS_DIR}:/downloads
+      - ${INSTALL_DIR}/compose/services/qbittorrent/config:/config
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TIMESONE}
+      - WEBUI_PORT=8080
