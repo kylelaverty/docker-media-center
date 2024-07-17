@@ -19,6 +19,8 @@ services:
       - TZ=${TIMESONE}
     secrets:
       - portainer_admin_password
+    labels:
+      - com.centurylinklabs.watchtower.enable=true
 
 secrets:
   portainer_admin_password:

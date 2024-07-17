@@ -17,3 +17,5 @@ services:
       - DOZZLE_FILTER="status=running"
       - DOZZLE_NO_ANALYTICS=true
       - DOCKER_HOST=tcp://socket-proxy:2375
+    labels:
+      - com.centurylinklabs.watchtower.enable=true
