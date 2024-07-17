@@ -1,0 +1,21 @@
+# Closed Labels
+- name: "Closed: ⚰️ Inactive"
+  description: "No answer was received for weeks"
+  color: "959a9c"
+- name: "Closed: 👥 Duplicate"
+  description: "Issue duplicates an existing issue"
+  color: "959a9c"
+
+# Priority Labels
+- name: "Priority: 🚨 Urgent"
+  color: "03adfc"
+- name: "Priority: 💤 Low priority"
+  color: "03adfc"
+
+# Category Labels
+- name: "Category: Documentation ✒️"
+  description: "A problem with the readme or a code comment."
+  color: "ffc7ea"
+- name: "Category: Maintenance ⛓️"
+  description: "Anything related to code or other maintenance"
+  color: "ffc7ea"
