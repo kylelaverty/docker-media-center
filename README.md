@@ -57,6 +57,7 @@ Watchtower is a service that automatically updates the running Docker containers
 ## References
 
 - https://shantanoo-desai.github.io/posts/technology/portainer-docker-secrets/
+- https://www.smarthomebeginner.com/docker-media-server-2024/
 
 ## License
 
