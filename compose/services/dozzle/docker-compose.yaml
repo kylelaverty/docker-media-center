@@ -1,0 +1,19 @@
+services:
+  # Dozzle is a web-based Docker log viewer
+  dozzle:
+    image: amir20/dozzle:latest
+    container_name: dozzle
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - socket_proxy # connect to access docker sock
+      - default # see container logs from containers on this network
+    ports:
+      - "8082:8080"
+    environment:
+      - DOZZLE_LEVEL=info
+      - DOZZLE_TAILSIZE=300
+      - DOZZLE_FILTER="status=running"
+      - DOZZLE_NO_ANALYTICS=true
+      - DOCKER_HOST=tcp://socket-proxy:2375

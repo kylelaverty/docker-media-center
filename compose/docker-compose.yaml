@@ -20,3 +20,4 @@ include:
   - ./services/qbittorrent/docker-compose.yaml
   - ./services/watchtower/docker-compose.yaml
   - ./services/portainer/docker-compose.yaml
+  - ./services/dozzle/docker-compose.yaml

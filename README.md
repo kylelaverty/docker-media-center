@@ -12,6 +12,7 @@
 | [Qluetun](https://github.com/qdm12/gluetun)                                    | VPN     | OpenVPN client with DNS and firewall configuration |
 | [Qbittorrent](https://www.qbittorrent.org/)                                    | Torrent | Torrent client                                     |
 | [Portainer](https://www.portainer.io/)                                         | Support | Docker management                                  |
+| [Dozzle](https://dozzle.dev/)                                                  | Support | Real-time log viewer                               |
 | [Watchtower](https://containrrr.dev/watchtower/)                               | Support | Automatic container updates                        |
 
 ### Services Details
@@ -32,6 +33,10 @@ Qbittorrent is a torrent client that supports downloading and seeding torrents. 
 
 Portainer is a web-based Docker management tool that allows you to manage your Docker containers, images, networks, and volumes. You can access the web interface at `http://localhost:9000`. It will be used to check in on the docker setup and see if everything is healthy.
 
+#### Dozzle
+
+Dozzle is a service that provides a real-time log viewer for Docker containers. You can access the web interface at `http://localhost:8081`.
+
 #### Watchtower
 
 Watchtower is a service that automatically updates the running Docker containers. Which container is updated can be controlled by the `com.centurylinklabs.watchtower.enable` label in the service's `docker-compose.yml` file.
@@ -48,6 +53,7 @@ Watchtower is a service that automatically updates the running Docker containers
 | ----------- | --------------------- |
 | Portainer   | http://localhost:9000 |
 | Qbittorrent | http://localhost:8080 |
+| Dozzle      | http://localhost:8081 |
 
 ## Requirements
 
