@@ -1,0 +1,2 @@
+include:
+  - ./services/gluten/docker-compose.yaml
