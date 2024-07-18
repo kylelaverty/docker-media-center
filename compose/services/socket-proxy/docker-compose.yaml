@@ -7,6 +7,8 @@ services:
     security_opt:
       - no-new-privileges:true
     privileged: true
+    read_only: false
+    mem_limit: 64M
     networks:
       socket_proxy:
         ipv4_address: 192.168.91.254 # You can specify a static IP

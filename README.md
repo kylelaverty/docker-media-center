@@ -28,19 +28,19 @@ Gluetun is a VPN client that supports OpenVPN. You can change the VPN provider b
 
 #### Jellyfin
 
-Jellyfin is a media server that allows you to organize and stream your media files. You can access the web interface at `http://localhost:8096`. It will be used to stream media files to your devices.
+Jellyfin is a media server that allows you to organize and stream your media files. It will be used to stream media files to your devices.
 
 #### Qbittorrent
 
-Qbittorrent is a torrent client that supports downloading and seeding torrents. You can access the web interface at `http://localhost:8080`.
+Qbittorrent is a torrent client that supports downloading and seeding torrents.
 
 #### Portainer
 
-Portainer is a web-based Docker management tool that allows you to manage your Docker containers, images, networks, and volumes. You can access the web interface at `http://localhost:9000`. It will be used to check in on the docker setup and see if everything is healthy.
+Portainer is a web-based Docker management tool that allows you to manage your Docker containers, images, networks, and volumes. It will be used to check in on the docker setup and see if everything is healthy.
 
 #### Dozzle
 
-Dozzle is a service that provides a real-time log viewer for Docker containers. You can access the web interface at `http://localhost:8081`.
+Dozzle is a service that provides a real-time log viewer for Docker containers.
 
 #### Watchtower
 
@@ -58,8 +58,8 @@ Watchtower is a service that automatically updates the running Docker containers
 | Service     | Endpoint              |
 | ----------- | --------------------- |
 | Portainer   | http://localhost:9000 |
-| Qbittorrent | http://localhost:8080 |
-| Dozzle      | http://localhost:8081 |
+| Qbittorrent | http://localhost:8085 |
+| Dozzle      | http://localhost:8082 |
 | Jellyfin    | http://localhost:8096 |
 
 ## Requirements
