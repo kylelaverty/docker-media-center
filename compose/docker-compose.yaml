@@ -27,3 +27,4 @@ include:
   # MEDIA
   - ./services/jellyfin/docker-compose.yaml
   - ./services/qbittorrent/docker-compose.yaml
+  - ./services/radarr/docker-compose.yaml

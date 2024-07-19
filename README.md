@@ -11,6 +11,7 @@
 | [Docker Socket Proxy](https://docs.linuxserver.io/images/docker-socket-proxy/) | Proxy   | Protect Docker socket with a proxy                 |
 | [Qluetun](https://github.com/qdm12/gluetun)                                    | VPN     | OpenVPN client with DNS and firewall configuration |
 | [Jellyfin](https://jellyfin.org/)                                              | Media   | Media server                                       |
+| [Radarr](https://radarr.video/)                                                | Media   | Movie management and automation                    |
 | [Qbittorrent](https://www.qbittorrent.org/)                                    | Torrent | Torrent client                                     |
 | [Portainer](https://www.portainer.io/)                                         | Support | Docker management                                  |
 | [Dozzle](https://dozzle.dev/)                                                  | Support | Real-time log viewer                               |
@@ -29,6 +30,10 @@ Gluetun is a VPN client that supports OpenVPN. You can change the VPN provider b
 #### Jellyfin
 
 Jellyfin is a media server that allows you to organize and stream your media files. It will be used to stream media files to your devices.
+
+#### Radarr
+
+Radarr is a service that manages and automates the downloading of movies. It will be used to automatically download movies based on the criteria you set.
 
 #### Qbittorrent
 
@@ -58,6 +63,7 @@ Watchtower is a service that automatically updates the running Docker containers
 | Service     | Endpoint              |
 | ----------- | --------------------- |
 | Portainer   | http://localhost:9000 |
+| Radarr      | http://localhost:7878 |
 | Qbittorrent | http://localhost:8085 |
 | Dozzle      | http://localhost:8082 |
 | Jellyfin    | http://localhost:8096 |
@@ -74,6 +80,8 @@ Watchtower is a service that automatically updates the running Docker containers
 - https://www.web2generators.com/apache-tools/htpasswd-generator
 - https://github.com/EdyTheCow/docker-media-center
 - https://gitlab.com/rogs/yams
+- https://github.com/bcicen/ctop
+- https://github.com/veggiemonk/awesome-docker
 
 ## License
 

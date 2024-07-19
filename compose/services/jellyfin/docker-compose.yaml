@@ -16,7 +16,7 @@ services:
       - "8920:8920" # HTTPS port
     volumes:
       - ${INSTALL_DIR}/compose/services/jellyfin/config:/config
-      - ${MOVIE_DIR}:/data/movies
+      - ${MOVIES_DIR}:/data/movies
       - ${TV_DIR}:/data/tv
       - ${DOWNLOADS_DIR}:/data/downloads
       - /dev/shm:/data/transcode # Offload transcoding to RAM if you have enough RAM
