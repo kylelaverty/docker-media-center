@@ -28,3 +28,5 @@ include:
   - ./services/jellyfin/docker-compose.yaml
   - ./services/qbittorrent/docker-compose.yaml
   - ./services/radarr/docker-compose.yaml
+  # UTILITIES
+  - ./services/qbittorrent-port/docker-compose.yaml

@@ -9,10 +9,11 @@
 | Service                                                                        | Purpose | Description                                        |
 | ------------------------------------------------------------------------------ | ------- | -------------------------------------------------- |
 | [Docker Socket Proxy](https://docs.linuxserver.io/images/docker-socket-proxy/) | Proxy   | Protect Docker socket with a proxy                 |
-| [Qluetun](https://github.com/qdm12/gluetun)                                    | VPN     | OpenVPN client with DNS and firewall configuration |
+| [Gluetun](https://github.com/qdm12/gluetun)                                    | VPN     | OpenVPN client with DNS and firewall configuration |
 | [Jellyfin](https://jellyfin.org/)                                              | Media   | Media server                                       |
 | [Radarr](https://radarr.video/)                                                | Media   | Movie management and automation                    |
 | [Qbittorrent](https://www.qbittorrent.org/)                                    | Torrent | Torrent client                                     |
+| [Qbittorrent-Port](https://github.com/tcj-one/qbittorrent-port-forward-file)   | Support | Qbittorrent port-forward rule updater              |
 | [Portainer](https://www.portainer.io/)                                         | Support | Docker management                                  |
 | [Dozzle](https://dozzle.dev/)                                                  | Support | Real-time log viewer                               |
 | [Watchtower](https://containrrr.dev/watchtower/)                               | Support | Automatic container updates                        |
@@ -38,6 +39,10 @@ Radarr is a service that manages and automates the downloading of movies. It wil
 #### Qbittorrent
 
 Qbittorrent is a torrent client that supports downloading and seeding torrents.
+
+#### Qbittorrent-Port
+
+Qbittorrent-Port is a service that updates the port-forward rule for Qbittorrent.
 
 #### Portainer
 

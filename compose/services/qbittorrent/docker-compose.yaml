@@ -16,7 +16,7 @@ services:
     volumes:
       - ${TORRENTS_DIR}:/data/torrents
       - ${INSTALL_DIR}/compose/services/qbittorrent/config:/config
-      - ${INSTALL_DIR}/compose/services/gluten/config:/config/data_gluetun
+      - ${INSTALL_DIR}/compose/services/gluetun/config:/config/data_gluetun
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
