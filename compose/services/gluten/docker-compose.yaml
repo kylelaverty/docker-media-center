@@ -17,8 +17,8 @@ services:
       - 8388:8388/udp # Shadowsocks
       - 8000:8000/tcp # Build-in HTTP control header
       # other container ports
-      - 8085:8080/tcp # qbit webui
-      - 7878:7878/tcp # radarr
+      - ${QBT_EXTERNAL_WEBUI_PORT}:${QBT_CONTAINER_WEBUI_PORT}/tcp # qbit webui
+      - ${RADARR_EXTERNAL_PORT}:${RADARR_CONTAINER_PORT}/tcp # radarr
     volumes:
       - ${INSTALL_DIR}/compose/services/gluten/config:/config
     environment:

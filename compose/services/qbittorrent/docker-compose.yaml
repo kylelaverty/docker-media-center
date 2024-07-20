@@ -10,14 +10,18 @@ services:
     network_mode: "service:gluetun"
     depends_on:
       - gluetun
+    stop_grace_period: 1m
+    tmpfs:
+      - /tmp
     volumes:
       - ${TORRENTS_DIR}:/data/torrents
       - ${INSTALL_DIR}/compose/services/qbittorrent/config:/config
+      - ${INSTALL_DIR}/compose/services/gluten/config:/config/data_gluetun
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
       - TZ=${TIMESONE}
       - UMASK_SET=022
-      - WEBUI_PORT=8085
+      - WEBUI_PORT=${QBT_EXTERNAL_WEBUI_PORT}
     labels:
       - com.centurylinklabs.watchtower.enable=true
