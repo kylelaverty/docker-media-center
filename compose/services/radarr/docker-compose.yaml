@@ -1,7 +1,14 @@
 services:
-  # Radarr is used to query, add downloads to the download queue and index Movies
-  # https://radarr.video/
-  # Root Image: Alpine Linux
+  ###########################################################################
+  ###########################################################################
+  ##
+  ##  Docker Compose File: Radarr (LinuxServer.io)
+  ##  Function: Movie Library Manager
+  ##
+  ##  Documentation: https://docs.linuxserver.io/images/docker-radarr
+  ##
+  ###########################################################################
+  ###########################################################################
   radarr:
     image: lscr.io/linuxserver/radarr:latest
     container_name: radarr
@@ -13,8 +20,7 @@ services:
       - gluetun
     volumes:
       - ${INSTALL_DIR}/compose/services/radarr/config:/config
-      - ${DOWNLOADS_DIR}:/downloads
-      - ${MOVIES_DIR}:/movies
+      - ${DATA_DIR}:/data
       - "/etc/localtime:/etc/localtime:ro"
     environment:
       - PUID=${PUID}

@@ -1,5 +1,15 @@
 services:
-  # Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.
+  ###########################################################################
+  ###########################################################################
+  ##
+  ##  Docker Compose File: Jellyfin (LinuxServer.io)
+  ##  Function: Media Server
+  ##
+  ##  Documentation: https://jellyfin.org/docs/general/administration/installing#docker
+  ##  https://jellyfin.org/docs/general/administration/hardware-acceleration/
+  ##
+  ###########################################################################
+  ###########################################################################
   jellyfin:
     image: linuxserver/jellyfin:latest
     container_name: jellyfin
@@ -16,9 +26,7 @@ services:
       - "8920:8920" # HTTPS port
     volumes:
       - ${INSTALL_DIR}/compose/services/jellyfin/config:/config
-      - ${MOVIES_DIR}:/data/movies
-      - ${TV_DIR}:/data/tv
-      - ${DOWNLOADS_DIR}:/data/downloads
+      - ${MEDIA_DIR}:/data/media
       - /dev/shm:/data/transcode # Offload transcoding to RAM if you have enough RAM
     environment:
       - UMASK_SET=022

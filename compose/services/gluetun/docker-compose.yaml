@@ -1,7 +1,14 @@
 services:
-  # Gluetun is our VPN, so you can download torrents safely
-  # https://github.com/qdm12/gluetun
-  # Root Image: Alpine Linux
+  ###########################################################################
+  ###########################################################################
+  ##
+  ##  Docker Compose File: Gluetun (qmcgaw)
+  ##  Function: VPN Client
+  ##
+  ##  Documentation: https://github.com/qdm12/gluetun/wiki
+  ##
+  ###########################################################################
+  ###########################################################################
   gluetun:
     image: qmcgaw/gluetun:latest
     container_name: gluetun
@@ -12,9 +19,9 @@ services:
     devices:
       - /dev/net/tun:/dev/net/tun
     ports:
-      - 8888:8888/tcp # HTTP proxy
-      - 8388:8388/tcp # Shadowsocks
-      - 8388:8388/udp # Shadowsocks
+      - 8888:8888/tcp # Gluetun Local Network HTTP proxy
+      - 8388:8388/tcp # Gluetun Local Network Shadowsocks
+      - 8388:8388/udp # Gluetun Local Network Shadowsocks
       - 8000:8000/tcp # Build-in HTTP control header
       # other container ports
       - ${QBT_EXTERNAL_WEBUI_PORT}:${QBT_CONTAINER_WEBUI_PORT}/tcp # qbit webui

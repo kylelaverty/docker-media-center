@@ -1,6 +1,14 @@
 services:
-  # qBitorrent is used to download torrents
-  # Root Image: Alpine Linux
+  ###########################################################################
+  ###########################################################################
+  ##
+  ##  Docker Compose File: qBittorrent (LinuxServer.io)
+  ##  Function: Torrent Download Client
+  ##
+  ##  Documentation: https://docs.linuxserver.io/images/docker-qbittorrent
+  ##
+  ###########################################################################
+  ###########################################################################
   qbittorrent:
     image: lscr.io/linuxserver/qbittorrent:latest
     container_name: qbittorrent
