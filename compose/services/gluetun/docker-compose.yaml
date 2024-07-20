@@ -20,7 +20,7 @@ services:
       - ${QBT_EXTERNAL_WEBUI_PORT}:${QBT_CONTAINER_WEBUI_PORT}/tcp # qbit webui
       - ${RADARR_EXTERNAL_PORT}:${RADARR_CONTAINER_PORT}/tcp # radarr
     volumes:
-      - ${INSTALL_DIR}/compose/services/gluten/config:/config
+      - ${INSTALL_DIR}/compose/services/gluetun/config:/config
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
@@ -31,7 +31,7 @@ services:
       - OPENVPN_PASSWORD=${VPN_PASSWORD}
       - OPENVPN_CIPHERS=AES-256-GCM
       - VPN_PORT_FORWARDING=on
-      - VPN_PORT_FORWARDING_STATUS_FILE=/gluetun/forwarded_port
+      - VPN_PORT_FORWARDING_STATUS_FILE=/config/forwarded_port
       - UPDATER_PERIOD=24h
       - SERVER_REGIONS=${VPN_REGIONS}
       - FIREWALL_OUTBOUND_SUBNETS=${NETWORK_SUBNET}/24
