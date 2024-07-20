@@ -8,10 +8,9 @@ services:
     restart: unless-stopped
     security_opt:
       - no-new-privileges:true
-    networks:
-      - default
-    ports:
-      - 7878:7878
+    network_mode: "service:gluetun"
+    depends_on:
+      - gluetun
     volumes:
       - ${INSTALL_DIR}/compose/services/radarr/config:/config
       - ${DOWNLOADS_DIR}:/downloads

@@ -8,8 +8,10 @@ services:
     security_opt:
       - no-new-privileges:true
     network_mode: "service:gluetun"
+    depends_on:
+      - gluetun
     volumes:
-      - ${DOWNLOADS_DIR}:/data/downloads # Ensure that downloads folder is set to /data/downloads in qBittorrent
+      - ${TORRENTS_DIR}:/data/torrents
       - ${INSTALL_DIR}/compose/services/qbittorrent/config:/config
     environment:
       - PUID=${PUID}

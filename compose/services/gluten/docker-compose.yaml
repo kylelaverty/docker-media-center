@@ -8,21 +8,39 @@ services:
     restart: unless-stopped
     cap_add:
       - NET_ADMIN
+      - SYS_MODULE
     devices:
       - /dev/net/tun:/dev/net/tun
     ports:
       - 8888:8888/tcp # HTTP proxy
       - 8388:8388/tcp # Shadowsocks
       - 8388:8388/udp # Shadowsocks
-      - 8085:8080/tcp # gluetun
+      - 8000:8000/tcp # Build-in HTTP control header
+      # other container ports
+      - 8085:8080/tcp # qbit webui
+      - 7878:7878/tcp # radarr
     volumes:
       - ${INSTALL_DIR}/compose/services/gluten/config:/config
     environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TIMESONE}
       - VPN_SERVICE_PROVIDER=${VPN_SERVICE}
       - VPN_TYPE=openvpn
       - OPENVPN_USER=${VPN_USER}
       - OPENVPN_PASSWORD=${VPN_PASSWORD}
       - OPENVPN_CIPHERS=AES-256-GCM
+      - VPN_PORT_FORWARDING=on
+      - VPN_PORT_FORWARDING_STATUS_FILE=/gluetun/forwarded_port
+      - UPDATER_PERIOD=24h
       - SERVER_REGIONS=${VPN_REGIONS}
+      - FIREWALL_OUTBOUND_SUBNETS=${NETWORK_SUBNET}/24
+      - HTTPPROXY=on
+    # The container has no recovery logic. Use a healthcheck to catch disconnects.
+    healthcheck:
+      test: ping -c 1 www.google.com || exit 1
+      interval: 60s
+      timeout: 20s
+      retries: 5
     labels:
       - com.centurylinklabs.watchtower.enable=true
