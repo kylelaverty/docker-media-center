@@ -1,0 +1,22 @@
+services:
+  # Buildarr is used to fill in the configuration of other *Arr services programatically
+  # https://buildarr.github.io/
+  # Root Image: Alpine Linux
+  buildarr:
+    image: callum027/buildarr:latest
+    container_name: buildarr
+    restart: unless-stopped
+    depends_on:
+      - radarr
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - default
+    volumes:
+      - ${INSTALL_DIR}/compose/services/buildarr/config:/config
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TIMESONE}
+    labels:
+      - com.centurylinklabs.watchtower.enable=true

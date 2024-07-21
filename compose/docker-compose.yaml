@@ -30,3 +30,4 @@ include:
   - ./services/radarr/docker-compose.yaml
   # UTILITIES
   - ./services/qbittorrent-port/docker-compose.yaml
+  - ./services/buildarr/docker-compose.yaml
