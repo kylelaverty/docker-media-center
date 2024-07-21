@@ -16,19 +16,18 @@ services:
     restart: "no"
     security_opt:
       - no-new-privileges:true
-    networks:
-      - default
-    #user: $PUID:$PGID
+    network_mode: "service:gluetun"
+    depends_on:
+      - gluetun
     devices:
       - /dev/dri:/dev/dri # for harware transcoding
-    ports:
-      - "8096:8096" # HTTP port
-      - "8920:8920" # HTTPS port
     volumes:
       - ${INSTALL_DIR}/compose/services/jellyfin/config:/config
       - ${MEDIA_DIR}:/data/media
       - /dev/shm:/data/transcode # Offload transcoding to RAM if you have enough RAM
     environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
       - UMASK_SET=022
       - TZ=${TIMESONE}
     labels:

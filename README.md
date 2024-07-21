@@ -65,13 +65,13 @@ Watchtower is a service that automatically updates the running Docker containers
 
 ## Endpoints
 
-| Service     | Endpoint              |
-| ----------- | --------------------- |
-| Portainer   | http://localhost:9000 |
-| Radarr      | http://localhost:7878 |
-| Qbittorrent | http://localhost:8085 |
-| Dozzle      | http://localhost:8082 |
-| Jellyfin    | http://localhost:8096 |
+| Service     | Type          | Endpoint              |
+| ----------- | ------------- | --------------------- |
+| Portainer   | Direct        | http://localhost:9000 |
+| Radarr      | Reverse Proxy | http://localhost:7878 |
+| Qbittorrent | Reverse Proxy | http://localhost:8085 |
+| Dozzle      | Direct        | http://localhost:8082 |
+| Jellyfin    | Reverse Proxy | http://localhost:8096 |
 
 ## Requirements
 
@@ -87,6 +87,8 @@ Watchtower is a service that automatically updates the running Docker containers
 - https://gitlab.com/rogs/yams
 - https://github.com/bcicen/ctop
 - https://github.com/veggiemonk/awesome-docker
+- https://github.com/GitHubMilo/vpn_downloads
+- https://trash-guides.info/
 
 ## License
 
