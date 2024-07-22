@@ -8,6 +8,7 @@ services:
     restart: unless-stopped
     depends_on:
       - radarr
+      - prowlarr
     security_opt:
       - no-new-privileges:true
     networks:

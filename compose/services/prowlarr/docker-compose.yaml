@@ -1,0 +1,30 @@
+services:
+  ###########################################################################
+  ###########################################################################
+  ##
+  ##  Docker Compose File: Prowlarr (LinuxServer.io)
+  ##  Function: Torrent Index Manager
+  ##
+  ##  Documentation: https://docs.linuxserver.io/images/docker-prowlarr
+  ##
+  ###########################################################################
+  ###########################################################################
+  prowlarr:
+    image: lscr.io/linuxserver/prowlarr:latest
+    container_name: prowlarr
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - default
+    ports:
+      - 9696:9696
+    volumes:
+      - ${INSTALL_DIR}/compose/services/prowlarr/config:/config
+      - "/etc/localtime:/etc/localtime:ro"
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TIMESONE}
+    labels:
+      - com.centurylinklabs.watchtower.enable=true

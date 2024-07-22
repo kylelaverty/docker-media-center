@@ -31,3 +31,4 @@ include:
   # UTILITIES
   - ./services/qbittorrent-port/docker-compose.yaml
   - ./services/buildarr/docker-compose.yaml
+  - ./services/prowlarr/docker-compose.yaml
