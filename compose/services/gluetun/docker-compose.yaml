@@ -54,4 +54,4 @@ services:
       timeout: 20s
       retries: 5
     labels:
-      - com.centurylinklabs.watchtower.enable=true
+      - com.centurylinklabs.watchtower.enable=false
