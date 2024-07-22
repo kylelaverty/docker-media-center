@@ -11,8 +11,7 @@ services:
       - prowlarr
     security_opt:
       - no-new-privileges:true
-    networks:
-      - default
+    network_mode: "service:gluetun"
     volumes:
       - ${INSTALL_DIR}/compose/services/buildarr/config:/config
     environment:
