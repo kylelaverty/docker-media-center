@@ -13,6 +13,7 @@
 | [Jellyfin](https://jellyfin.org/)                                              | Media   | Media server                                       |
 | [Radarr](https://radarr.video/)                                                | Media   | Movie management and automation                    |
 | [Qbittorrent](https://www.qbittorrent.org/)                                    | Torrent | Torrent client                                     |
+| [Prowlarr](https://prowlarr.com/)                                              | Support | Indexer manager with \*Arr Integrations            |
 | [Qbittorrent-Port](https://github.com/tcj-one/qbittorrent-port-forward-file)   | Support | Qbittorrent port-forward rule updater              |
 | [Portainer](https://www.portainer.io/)                                         | Support | Docker management                                  |
 | [Dozzle](https://dozzle.dev/)                                                  | Support | Real-time log viewer                               |
@@ -72,6 +73,7 @@ Watchtower is a service that automatically updates the running Docker containers
 | Qbittorrent | Reverse Proxy | http://localhost:8085 |
 | Dozzle      | Direct        | http://localhost:8082 |
 | Jellyfin    | Reverse Proxy | http://localhost:8096 |
+| Prowlarr    | Reverse Proxy | http://localhost:9696 |
 
 ## Requirements
 
