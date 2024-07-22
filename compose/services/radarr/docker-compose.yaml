@@ -15,10 +15,11 @@ services:
     restart: unless-stopped
     security_opt:
       - no-new-privileges:true
-    networks:
-      - default
-    ports:
-      - 7878:7878
+    network_mode: "service:gluetun"
+    depends_on:
+      - gluetun
+      - prowlarr
+      - qbittorrent
     volumes:
       - ${INSTALL_DIR}/compose/services/radarr/config:/config
       - ${DATA_DIR}:/data
@@ -29,3 +30,4 @@ services:
       - TZ=${TIMESONE}
     labels:
       - com.centurylinklabs.watchtower.enable=true
+      - com.centurylinklabs.watchtower.depends-on=gluetun

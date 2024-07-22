@@ -25,8 +25,11 @@ services:
       - 8000:8000/tcp # Build-in HTTP control header
       # other container ports
       - ${QBT_EXTERNAL_WEBUI_PORT}:${QBT_CONTAINER_WEBUI_PORT}/tcp # WebUI Portal: qbittorrent (HTTP)
-      #- ${RADARR_EXTERNAL_PORT}:${RADARR_CONTAINER_PORT}/tcp # WebUI Portal: Radarr (HTTP)
+      - ${QBT_EXTERNAL_TORRENTING_PORT}:${QBT_CONTAINER_TORRENTING_PORT} # Torrenting Port: qbittorent
+      - ${QBT_EXTERNAL_TORRENTING_PORT}:${QBT_CONTAINER_TORRENTING_PORT}/udp # Torrenting Port: qbittorent (UDP)
+      - ${RADARR_EXTERNAL_PORT}:${RADARR_CONTAINER_PORT}/tcp # WebUI Portal: Radarr (HTTP)
       - ${JELLYFIN_EXTERNAL_PORT}:${JELLYFIN_CONTAINER_PORT}/tcp # WebUI Portal: Jellyfin (HTTP)
+      - ${PROWLARR_EXTERNAL_PORT}:${PROWLARR_CONTAINER_PORT}/tcp # WebUI Portal: Prowlarr (HTTP)
     volumes:
       - ${INSTALL_DIR}/compose/services/gluetun/config:/config
     environment:

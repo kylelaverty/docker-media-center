@@ -31,5 +31,7 @@ services:
       - TZ=${TIMESONE}
       - UMASK_SET=022
       - WEBUI_PORT=${QBT_EXTERNAL_WEBUI_PORT}
+      - TORRENTING_PORT=6881
     labels:
       - com.centurylinklabs.watchtower.enable=true
+      - com.centurylinklabs.watchtower.depends-on=gluetun

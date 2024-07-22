@@ -19,3 +19,4 @@ services:
       - PORT_FILE=/config/gluetun/forwarded_port
     labels:
       - com.centurylinklabs.watchtower.enable=true
+      - com.centurylinklabs.watchtower.depends-on=gluetun

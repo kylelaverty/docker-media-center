@@ -15,10 +15,10 @@ services:
     restart: unless-stopped
     security_opt:
       - no-new-privileges:true
-    networks:
-      - default
-    ports:
-      - 9696:9696
+    network_mode: "service:gluetun"
+    depends_on:
+      - gluetun
+      - qbittorrent
     volumes:
       - ${INSTALL_DIR}/compose/services/prowlarr/config:/config
       - "/etc/localtime:/etc/localtime:ro"
@@ -28,3 +28,4 @@ services:
       - TZ=${TIMESONE}
     labels:
       - com.centurylinklabs.watchtower.enable=true
+      - com.centurylinklabs.watchtower.depends-on=gluetun
