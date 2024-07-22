@@ -15,7 +15,6 @@
 | [Qbittorrent](https://www.qbittorrent.org/)                                    | Torrent | Torrent client                                     |
 | [Prowlarr](https://prowlarr.com/)                                              | Support | Indexer manager with \*Arr Integrations            |
 | [Qbittorrent-Port](https://github.com/tcj-one/qbittorrent-port-forward-file)   | Support | Qbittorrent port-forward rule updater              |
-| [Portainer](https://www.portainer.io/)                                         | Support | Docker management                                  |
 | [Dozzle](https://dozzle.dev/)                                                  | Support | Real-time log viewer                               |
 | [Watchtower](https://containrrr.dev/watchtower/)                               | Support | Automatic container updates                        |
 
@@ -45,10 +44,6 @@ Qbittorrent is a torrent client that supports downloading and seeding torrents.
 
 Qbittorrent-Port is a service that updates the port-forward rule for Qbittorrent.
 
-#### Portainer
-
-Portainer is a web-based Docker management tool that allows you to manage your Docker containers, images, networks, and volumes. It will be used to check in on the docker setup and see if everything is healthy.
-
 #### Dozzle
 
 Dozzle is a service that provides a real-time log viewer for Docker containers.
@@ -68,7 +63,6 @@ Watchtower is a service that automatically updates the running Docker containers
 
 | Service     | Type          | Endpoint              |
 | ----------- | ------------- | --------------------- |
-| Portainer   | Direct        | http://localhost:9000 |
 | Radarr      | Reverse Proxy | http://localhost:7878 |
 | Qbittorrent | Reverse Proxy | http://localhost:8085 |
 | Dozzle      | Direct        | http://localhost:8082 |
