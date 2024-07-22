@@ -1,0 +1,9 @@
+prowlarr:
+  settings:
+    tags:
+      definitions:
+        - "shows"
+        - "anime-shows"
+        - "movies"
+        - "anime-movies"
+        - "books"
