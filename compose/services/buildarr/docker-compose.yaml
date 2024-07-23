@@ -32,6 +32,6 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
       - TZ=${TIMESONE}
-      - BUILDARR_LOG_LEVEL=DEBUG
+      - BUILDARR_LOG_LEVEL=INFO
     labels:
       - com.centurylinklabs.watchtower.enable=true
