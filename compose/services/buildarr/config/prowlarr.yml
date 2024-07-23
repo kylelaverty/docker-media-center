@@ -1,29 +1,15 @@
 includes:
+  - ./prowlarr-settings/prowlarr-general.yml
   - ./prowlarr-settings/prowlarr-indexers.yml
+  - ./prowlarr-settings/prowlarr-sync-profiles.yml
   - ./prowlarr-settings/prowlarr-tags.yml
+  - ./prowlarr-settings/prowlarr-ui.yml
 
 # Prowlarr instance configuration
 prowlarr:
   hostname: gluetun
   port: 9696
   protocol: http
-  general:
-    security:
-      authentication: external
-    logging:
-      log_level: Info
-    analytics:
-      send_anonymous_usage_data: false
-  ui:
-    enable_color_impaired_mode: false
-    first_day_of_week: monday
-    long_date_format: year-first
-    short_date_format: word-month-first
-    show_relative_dates: true
-    theme: auto
-    time_format: twentyfour-hour
-    ui_language: en
-    week_column_header: month-first
   settings:
     proxies:
       definitions:
@@ -33,13 +19,6 @@ prowlarr:
           request_timeout: 60
           tags:
             - "shows"
-    sync_profiles:
-      definitions:
-        Standard:
-          enable_rss: true
-          enable_interactive_search: true
-          enable_automatic_search: true
-          minimum_seeders: 5
     notifications:
       definitions: {}
       delete_unmanaged: false

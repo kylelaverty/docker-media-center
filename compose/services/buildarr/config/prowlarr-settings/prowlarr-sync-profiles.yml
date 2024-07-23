@@ -1,0 +1,9 @@
+prowlarr:
+  settings:
+    sync_profiles:
+      definitions:
+        Standard:
+          enable_rss: true
+          enable_interactive_search: true
+          enable_automatic_search: true
+          minimum_seeders: 5
