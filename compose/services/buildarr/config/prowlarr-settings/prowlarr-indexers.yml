@@ -2,6 +2,7 @@ prowlarr:
   settings:
     indexers:
       indexers:
+        delete_unmanaged: true
         definitions:
           #1337x: 25
           anirena:

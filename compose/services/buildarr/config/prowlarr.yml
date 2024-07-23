@@ -4,14 +4,14 @@ includes:
 
 # Prowlarr instance configuration
 prowlarr:
-  hostname: prowlarr
+  hostname: gluetun
   port: 9696
-  protocol: "http"
+  protocol: http
   general:
     security:
       authentication: external
     logging:
-      log_level: INFO
+      log_level: Info
     analytics:
       send_anonymous_usage_data: false
   ui:

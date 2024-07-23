@@ -1,22 +1,37 @@
 services:
-  # Buildarr is used to fill in the configuration of other *Arr services programatically
-  # https://buildarr.github.io/
-  # Root Image: Alpine Linux
+  ###########################################################################
+  ###########################################################################
+  ##
+  ##  Docker Compose File: Buildarr (callum027)
+  ##  Function: Buildarr is used to fill in the configuration of other *Arr services programatically
+  ##
+  ##  Documentation: https://buildarr.github.io/
+  ##
+  ###########################################################################
+  ###########################################################################
   buildarr:
     image: callum027/buildarr:latest
     container_name: buildarr
     restart: unless-stopped
-    depends_on:
-      - radarr
-      - prowlarr
     security_opt:
       - no-new-privileges:true
-    network_mode: "service:gluetun"
+    networks:
+      - default # call apis of containers on this network
+    depends_on:
+      - gluetun # VPN some containers are using
+      - prowlarr # Configured Prowlarr Instance
+      - radarr # Configured Radarr Instance (Movies)
+    # - radarr-anime # Configured Radarr Instance (Movies - Anime)
+    # - sonarr # Configured Sonarr Instance (TV Shows)
+    # - sonarr-anime # Configured Sonarr Instance (TV Shows - Anime)
+    # - lidarr # Configured Lidarr Instance (Music)
+    # - readarr # Configured Readarr Instance (Books)
     volumes:
       - ${INSTALL_DIR}/compose/services/buildarr/config:/config
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
       - TZ=${TIMESONE}
+      - BUILDARR_LOG_LEVEL=DEBUG
     labels:
       - com.centurylinklabs.watchtower.enable=true
