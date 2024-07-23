@@ -32,6 +32,7 @@ services:
       - ${RADARR_EXTERNAL_PORT}:${RADARR_CONTAINER_PORT}/tcp # WebUI Portal: Radarr (HTTP)
       - ${JELLYFIN_EXTERNAL_PORT}:${JELLYFIN_CONTAINER_PORT}/tcp # WebUI Portal: Jellyfin (HTTP)
       - ${PROWLARR_EXTERNAL_PORT}:${PROWLARR_CONTAINER_PORT}/tcp # WebUI Portal: Prowlarr (HTTP)
+      - ${FLARESOLVERR_EXTERNAL_PORT}:${FLARESOLVERR_CONTAINER_PORT}/tcp # FlareSolverr
     volumes:
       - ${INSTALL_DIR}/compose/services/gluetun/config:/config
     environment:

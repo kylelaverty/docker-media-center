@@ -11,14 +11,6 @@ prowlarr:
   port: 9696
   protocol: http
   settings:
-    proxies:
-      definitions:
-        "FlareSolverr":
-          type: "flaresolverr"
-          host_url: "http://flaresolverr:8191"
-          request_timeout: 60
-          tags:
-            - "shows"
     notifications:
       definitions: {}
       delete_unmanaged: false

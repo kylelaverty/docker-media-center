@@ -20,6 +20,7 @@ services:
     depends_on:
       - gluetun # VPN some containers are using
       - prowlarr # Configured Prowlarr Instance
+      - flaresolverr # FlareSolverr proxy for prowlarr
       - radarr # Configured Radarr Instance (Movies)
     # - radarr-anime # Configured Radarr Instance (Movies - Anime)
     # - sonarr # Configured Sonarr Instance (TV Shows)

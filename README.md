@@ -14,8 +14,10 @@
 | [Radarr](https://radarr.video/)                                                | Media   | Movie management and automation                    |
 | [Qbittorrent](https://www.qbittorrent.org/)                                    | Torrent | Torrent client                                     |
 | [Prowlarr](https://prowlarr.com/)                                              | Support | Indexer manager with \*Arr Integrations            |
+| [Flaresolverr](https://github.com/FlareSolverr/FlareSolverr)                   | Support | Cloudflare bypass integrated with Prowlarr         |
 | [Qbittorrent-Port](https://github.com/tcj-one/qbittorrent-port-forward-file)   | Support | Qbittorrent port-forward rule updater              |
 | [Dozzle](https://dozzle.dev/)                                                  | Support | Real-time log viewer                               |
+| [Buildarr](https://buildarr.github.io/)                                        | Support | Automated configuration for \*Arr services         |
 | [Watchtower](https://containrrr.dev/watchtower/)                               | Support | Automatic container updates                        |
 
 ### Services Details
@@ -36,6 +38,7 @@ Jellyfin is a media server that allows you to organize and stream your media fil
 
 Radarr is a service that manages and automates the downloading of movies. It will be used to automatically download movies based on the criteria you set.
 
+
 #### Qbittorrent
 
 Qbittorrent is a torrent client that supports downloading and seeding torrents.
@@ -44,9 +47,21 @@ Qbittorrent is a torrent client that supports downloading and seeding torrents.
 
 Qbittorrent-Port is a service that updates the port-forward rule for Qbittorrent.
 
+#### Prowlarr
+
+Prowlarr is a service that manages indexers and download clients for \*Arr services.
+
+#### Flaresolverr
+
+Flaresolverr is a service that bypasses Cloudflare protection for Prowlarr.
+
 #### Dozzle
 
 Dozzle is a service that provides a real-time log viewer for Docker containers.
+
+#### Buildarr
+
+Buildarr is a service that automatically configures \*Arr services.
 
 #### Watchtower
 
@@ -61,13 +76,14 @@ Watchtower is a service that automatically updates the running Docker containers
 
 ## Endpoints
 
-| Service     | Type          | Endpoint              |
-| ----------- | ------------- | --------------------- |
-| Radarr      | Reverse Proxy | http://localhost:7878 |
-| Qbittorrent | Reverse Proxy | http://localhost:8085 |
-| Dozzle      | Direct        | http://localhost:8082 |
-| Jellyfin    | Reverse Proxy | http://localhost:8096 |
-| Prowlarr    | Reverse Proxy | http://localhost:9696 |
+| Service      | Type          | Endpoint              |
+| ------------ | ------------- | --------------------- |
+| Radarr       | Reverse Proxy | http://localhost:7878 |
+| Qbittorrent  | Reverse Proxy | http://localhost:8085 |
+| Dozzle       | Direct        | http://localhost:8082 |
+| Jellyfin     | Reverse Proxy | http://localhost:8096 |
+| Flaresolverr | Reverse Proxy | http://localhost:8191 |
+| Prowlarr     | Reverse Proxy | http://localhost:9696 |
 
 ## Requirements
 

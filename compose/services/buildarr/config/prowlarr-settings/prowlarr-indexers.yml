@@ -4,7 +4,20 @@ prowlarr:
       indexers:
         delete_unmanaged: true
         definitions:
-          #1337x: 25
+          1337x:
+            type: 1337x
+            enable: true
+            sync_profile: Standard
+            redirect: false
+            priority: 25
+            grab_limit: 26
+            query_limit: 256
+            tags:
+              - "movies"
+              - "anime-movies"
+            fields:
+              torrentBaseSettings.seedRatio: 1
+              prefer_magnet_links: true
           anirena:
             type: anirena
             enable: true
@@ -139,3 +152,11 @@ prowlarr:
             fields:
               torrentBaseSettings.seedRatio: 0.1
               prefer_magnet_links: true
+      proxies:
+        definitions:
+          "FlareSolverr":
+            type: "flaresolverr"
+            host_url: "http://localhost:8191"
+            request_timeout: 60
+            tags:
+              - "movies"
