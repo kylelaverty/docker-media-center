@@ -1,5 +1,14 @@
 services:
-  # Dozzle is a web-based Docker log viewer
+  ###########################################################################
+  ###########################################################################
+  ##
+  ##  Docker Compose File: Dozzle (amir20)
+  ##  Function: Log Viewer for Docker Containers
+  ##
+  ##  Documentation: https://dozzle.dev/guide/what-is-dozzle
+  ##
+  ###########################################################################
+  ###########################################################################
   dozzle:
     image: amir20/dozzle:latest
     container_name: dozzle
