@@ -1,11 +1,12 @@
 includes:
-  - ./prowlarr-settings/prowlarr-general.yml
-  - ./prowlarr-settings/prowlarr-indexers.yml
-  - ./prowlarr-settings/prowlarr-sync-profiles.yml
-  - ./prowlarr-settings/prowlarr-tags.yml
-  - ./prowlarr-settings/prowlarr-ui.yml
+  - ./prowlarr-sub-configs/prowlarr-general.yml
+  - ./prowlarr-sub-configs/prowlarr-indexers.yml
+  - ./prowlarr-sub-configs/prowlarr-sync-profiles.yml
+  - ./prowlarr-sub-configs/prowlarr-tags.yml
+  - ./prowlarr-sub-configs/prowlarr-ui.yml
+  - ./prowlarr-sub-configs/prowlarr-applications.yml
 
-# Prowlarr instance configuration
+# Prowlarr instance configuration.
 prowlarr:
   hostname: gluetun
   port: 9696

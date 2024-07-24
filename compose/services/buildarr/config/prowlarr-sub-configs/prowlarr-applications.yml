@@ -1,0 +1,14 @@
+prowlarr:
+  settings:
+    apps:
+      applications:
+        definitions:
+          Radarr:
+            type: radarr
+            instnace_name: Radarr
+            prowlarr_url: http://localhost:9696
+            base_url: http://localhost:7878
+            api_key: "98cd72544d864278b5cb67757b6bd6b0"
+            sync_level: FullSync
+            tags:
+              - "movies"

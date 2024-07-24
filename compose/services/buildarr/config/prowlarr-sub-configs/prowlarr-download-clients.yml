@@ -1,0 +1,21 @@
+prowlarr:
+  settings:
+    download-clients:
+      definitions:
+        qBittorrent:
+          type: qbittorrent
+          enabled: true
+          host: localhost
+          port: 8085
+          use_ssl: false
+          username: admin
+          password: adminadmin
+          category: prowlarr
+          client_priority: last
+          initial_state: start
+          tags:
+            - "movies"
+            - "anime-movies"
+            - "shows"
+            - "anime-shows"
+            - "books"

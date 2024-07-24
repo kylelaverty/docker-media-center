@@ -10,11 +10,13 @@ prowlarr:
             sync_profile: Standard
             redirect: false
             priority: 25
-            grab_limit: 26
-            query_limit: 256
+            grab_limit: 10
+            query_limit: 100
             tags:
               - "movies"
               - "anime-movies"
+              - "shows"
+              - "anime-shows"
             fields:
               torrentBaseSettings.seedRatio: 1
               prefer_magnet_links: true
@@ -24,8 +26,8 @@ prowlarr:
             sync_profile: Standard
             redirect: false
             priority: 15
-            grab_limit: 26
-            query_limit: 256
+            grab_limit: 10
+            query_limit: 100
             tags:
               - "anime-shows"
               - "anime-movies"
@@ -38,8 +40,8 @@ prowlarr:
             sync_profile: Standard
             redirect: false
             priority: 35
-            grab_limit: 26
-            query_limit: 256
+            grab_limit: 10
+            query_limit: 100
             tags:
               - "shows"
               - "movies"
@@ -54,23 +56,22 @@ prowlarr:
             sync_profile: Standard
             redirect: false
             priority: 50
-            grab_limit: 26
-            query_limit: 256
+            grab_limit: 10
+            query_limit: 100
             tags:
               - "anime-shows"
               - "anime-movies"
             fields:
               torrentBaseSettings.seedRatio: 0.1
               prefer_magnet_links: true
-          #extratorrent-st: 30
           eztv:
             type: eztv
             enable: true
             sync_profile: Standard
             redirect: false
             priority: 20
-            grab_limit: 26
-            query_limit: 256
+            grab_limit: 10
+            query_limit: 100
             tags:
               - "shows"
             fields:
@@ -82,8 +83,8 @@ prowlarr:
             sync_profile: Standard
             redirect: false
             priority: 40
-            grab_limit: 26
-            query_limit: 256
+            grab_limit: 10
+            query_limit: 100
             tags:
               - "shows"
               - "movies"
@@ -99,8 +100,8 @@ prowlarr:
             sync_profile: Standard
             redirect: false
             priority: 45
-            grab_limit: 26
-            query_limit: 256
+            grab_limit: 10
+            query_limit: 100
             tags:
               - "shows"
               - "movies"
@@ -114,8 +115,8 @@ prowlarr:
             sync_profile: Standard
             redirect: false
             priority: 50
-            grab_limit: 26
-            query_limit: 256
+            grab_limit: 10
+            query_limit: 100
             tags:
               - "shows"
               - "movies"
@@ -131,8 +132,8 @@ prowlarr:
             sync_profile: Standard
             redirect: false
             priority: 5
-            grab_limit: 26
-            query_limit: 256
+            grab_limit: 10
+            query_limit: 100
             tags:
               - "movies"
             fields:
@@ -144,8 +145,8 @@ prowlarr:
             sync_profile: Standard
             redirect: false
             priority: 10
-            grab_limit: 26
-            query_limit: 256
+            grab_limit: 10
+            query_limit: 100
             tags:
               - "anime-shows"
               - "anime-movies"
