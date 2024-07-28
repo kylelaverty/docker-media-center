@@ -1,6 +1,6 @@
 # Radarr instance configuration
 radarr:
-  hotname: radarr
+  hostname: gluetun
   port: 7878
   protocol: http
   general:

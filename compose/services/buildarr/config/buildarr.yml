@@ -1,5 +1,5 @@
 includes:
-  #- radarr.yml
+  - radarr.yml
   - prowlarr.yml
 
 # Buildarr configuration (all settings have sane default values)
