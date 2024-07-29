@@ -7,7 +7,9 @@ services:
     security_opt:
       - no-new-privileges:true
     privileged: true
-    read_only: false
+    read_only: true
+    tmpfs:
+      - /run
     mem_limit: 64M
     networks:
       socket_proxy:
