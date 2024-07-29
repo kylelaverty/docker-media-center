@@ -15,3 +15,5 @@ services:
       - LOG_HTML=${FLARESOLVERR_LOG_HTML}
       - LANG=${FLARESOLVERR_LANG}
       - TZ=${TIMESONE}
+    labels:
+      - com.centurylinklabs.watchtower.enable=true
