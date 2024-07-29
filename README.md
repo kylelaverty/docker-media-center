@@ -45,7 +45,7 @@ Qbittorrent is a torrent client that supports downloading and seeding torrents.
 
 #### Qbittorrent-Port
 
-Qbittorrent-Port is a service that updates the port-forward rule for Qbittorrent.
+Details [here](./compose/services/qbittorrent-port/readme.md).
 
 #### Prowlarr
 
