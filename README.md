@@ -65,7 +65,7 @@ Buildarr is a service that automatically configures \*Arr services.
 
 #### Watchtower
 
-Watchtower is a service that automatically updates the running Docker containers. Which container is updated can be controlled by the `com.centurylinklabs.watchtower.enable` label in the service's `docker-compose.yml` file.
+Details [here](./compose/services/watchtower/readme.md).
 
 ## Internal Networks
 
