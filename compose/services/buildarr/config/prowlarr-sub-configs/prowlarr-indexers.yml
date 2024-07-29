@@ -77,23 +77,6 @@ prowlarr:
             fields:
               torrentBaseSettings.seedRatio: 1
               prefer_magnet_links: true
-          limetorrents:
-            type: limetorrents
-            enable: true
-            sync_profile: Standard
-            redirect: false
-            priority: 40
-            grab_limit: 10
-            query_limit: 100
-            tags:
-              - "shows"
-              - "movies"
-              - "books"
-              - "anime-shows"
-              - "anime-movies"
-            fields:
-              torrentBaseSettings.seedRatio: 1
-              prefer_magnet_links: true
           thepiratebay:
             type: thepiratebay
             enable: true
