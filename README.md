@@ -24,7 +24,7 @@
 
 #### Docker Socket Proxy
 
-Docker Socket Proxy is a service that protects the Docker socket with a proxy. It is used to prevent unauthorized access to the Docker socket.
+Details [here](./compose/services/socket-proxy/readme.md).
 
 #### Gluetun
 
