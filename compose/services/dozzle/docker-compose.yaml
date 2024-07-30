@@ -22,7 +22,6 @@ services:
       - "8082:8080"
     environment:
       - DOZZLE_LEVEL=info
-      - DOZZLE_TAILSIZE=300
       - DOZZLE_FILTER="status=running"
       - DOZZLE_NO_ANALYTICS=true
       - DOCKER_HOST=tcp://socket-proxy:2375

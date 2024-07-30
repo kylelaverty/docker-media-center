@@ -23,6 +23,7 @@
 ### Services Details
 
 - Docker Socket Proxy [Docs](./compose/services/socket-proxy/readme.md)
+- Dozzle [Docs](./compose/services/dozzle/readme.md)
 - Flaresolverr [Docs](./compose/services/flaresolverr/readme.md)
 - qBittorrent-Port [Docs](./compose/services/qbittorrent-port/readme.md)
 - Watchtower [Docs](./compose/services/watchtower/readme.md)
@@ -47,10 +48,6 @@ Qbittorrent is a torrent client that supports downloading and seeding torrents.
 #### Prowlarr
 
 Prowlarr is a service that manages indexers and download clients for \*Arr services.
-
-#### Dozzle
-
-Dozzle is a service that provides a real-time log viewer for Docker containers.
 
 #### Buildarr
 
