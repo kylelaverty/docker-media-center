@@ -22,9 +22,10 @@
 
 ### Services Details
 
-#### Docker Socket Proxy
-
-Details [here](./compose/services/socket-proxy/readme.md).
+- Docker Socket Proxy [Docs](./compose/services/socket-proxy/readme.md)
+- Flaresolverr [Docs](./compose/services/flaresolverr/readme.md)
+- qBittorrent-Port [Docs](./compose/services/qbittorrent-port/readme.md)
+- Watchtower [Docs](./compose/services/watchtower/readme.md)
 
 #### Gluetun
 
@@ -43,17 +44,9 @@ Radarr is a service that manages and automates the downloading of movies. It wil
 
 Qbittorrent is a torrent client that supports downloading and seeding torrents.
 
-#### Qbittorrent-Port
-
-Details [here](./compose/services/qbittorrent-port/readme.md).
-
 #### Prowlarr
 
 Prowlarr is a service that manages indexers and download clients for \*Arr services.
-
-#### Flaresolverr
-
-Flaresolverr is a service that bypasses Cloudflare protection for Prowlarr.
 
 #### Dozzle
 
@@ -62,10 +55,6 @@ Dozzle is a service that provides a real-time log viewer for Docker containers.
 #### Buildarr
 
 Buildarr is a service that automatically configures \*Arr services.
-
-#### Watchtower
-
-Details [here](./compose/services/watchtower/readme.md).
 
 ## Internal Networks
 
