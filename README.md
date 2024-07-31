@@ -2,6 +2,29 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/kylelaverty/docker-media-center/blob/main/LICENSE)
 
+This repo represents my ongoing, incremental work to create a Docker-based media center. The goal is to create a media center that is easy to deploy, maintain, and scale. The media center will be built using Docker containers and Docker Compose. The media center will include services for managing and automating the downloading of media files, streaming media files, and managing indexers and download clients.
+
+## Disclaimer
+
+This project is for educational purposes only. I am not responsible for any misuse of the information provided in this project. I do not condone illegal activities. Use this project at your own risk.
+
+Torrenting is not an illegal activity. It is the sharing of files between users. However, downloading copyrighted material without permission is illegal. Make sure you have the right to download the files you are downloading.
+
+## Table of Contents
+
+- [Services](#services)
+- [Services Summary](#services-summary)
+- [Services Details](#services-details)
+  - [Jellyfin](#jellyfin)
+  - [Radarr](#radarr)
+  - [Prowlarr](#prowlarr)
+- [Internal Networks](#internal-networks)
+- [Endpoints](#endpoints)
+- [Requirements](#requirements)
+- [References](#references)
+- [License](#license)
+- [Author](#author)
+
 ## Services
 
 ### Services Summary
