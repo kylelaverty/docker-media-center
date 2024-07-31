@@ -5,6 +5,7 @@ includes:
   - ./prowlarr-sub-configs/prowlarr-tags.yml
   - ./prowlarr-sub-configs/prowlarr-ui.yml
   - ./prowlarr-sub-configs/prowlarr-applications.yml
+  - ./prowlarr-sub-configs/prowlarr-download-clients.yml
 
 # Prowlarr instance configuration.
 prowlarr:

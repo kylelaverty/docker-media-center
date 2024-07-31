@@ -1,11 +1,12 @@
 prowlarr:
   settings:
-    first_day_of_week: monday
-    week_column_header: month-first
-    short_date_format: word-month-first
-    long_date_format: year-first
-    time_format: twentyfour-hour
-    show_relative_dates: true
-    enable_color_impaired_mode: false
-    theme: auto
-    ui_language: en
+    ui:
+      first_day_of_week: monday
+      week_column_header: month-first-padded
+      short_date_format: iso8601 #YYYY-MM-DD
+      long_date_format: month-first
+      time_format: twentyfour-hour
+      show_relative_dates: true
+      enable_color_impaired_mode: false
+      theme: auto #auto, light, dark
+      ui_language: en
