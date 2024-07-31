@@ -18,7 +18,7 @@ The current configuration needs the following information
 
 | Name     | Config File                                                 | Service     | Source Location                        |
 | -------- | ----------------------------------------------------------- | ----------- | -------------------------------------- |
-| api_key  | ./config/prowlarr-sub-configs/prowlarr-applications.yml     | prowlarr    | Settings => General => Api Key         |
+| api_key  | ./config/prowlarr-sub-configs/prowlarr-applications.yml     | readarr     | Settings => General => Api Key         |
 | username | ./config/prowlarr-sub-configs/prowlarr-download-clients.yml | qbittorrent | Tools => Options => Web UI => Username |
 | password | ./config/prowlarr-sub-configs/prowlarr-download-clients.yml | qbittorrent | Tools => Options => Web UI => Password |
 
