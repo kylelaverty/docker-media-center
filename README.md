@@ -22,6 +22,7 @@
 
 ### Services Details
 
+- Buildarr [Docs](./compose/services/buildarr/readme.md)
 - Docker Socket Proxy [Docs](./compose/services/socket-proxy/readme.md)
 - Dozzle [Docs](./compose/services/dozzle/readme.md)
 - Flaresolverr [Docs](./compose/services/flaresolverr/readme.md)
@@ -43,10 +44,6 @@ Update <AuthenticationMethod>External</AuthenticationMethod> in the `config.xml`
 #### Prowlarr
 
 Prowlarr is a service that manages indexers and download clients for \*Arr services.
-
-#### Buildarr
-
-Buildarr is a service that automatically configures \*Arr services.
 
 ## Internal Networks
 
