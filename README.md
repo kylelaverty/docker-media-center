@@ -25,6 +25,7 @@
 - Docker Socket Proxy [Docs](./compose/services/socket-proxy/readme.md)
 - Dozzle [Docs](./compose/services/dozzle/readme.md)
 - Flaresolverr [Docs](./compose/services/flaresolverr/readme.md)
+- qBittorrent [Docs](./compose/services/qbittorrent/readme.md)
 - qBittorrent-Port [Docs](./compose/services/qbittorrent-port/readme.md)
 - Watchtower [Docs](./compose/services/watchtower/readme.md)
 
@@ -40,10 +41,7 @@ Jellyfin is a media server that allows you to organize and stream your media fil
 
 Radarr is a service that manages and automates the downloading of movies. It will be used to automatically download movies based on the criteria you set.
 
-
-#### Qbittorrent
-
-Qbittorrent is a torrent client that supports downloading and seeding torrents.
+Update <AuthenticationMethod>External</AuthenticationMethod> in the `config.xml` file to remove authentication.
 
 #### Prowlarr
 
