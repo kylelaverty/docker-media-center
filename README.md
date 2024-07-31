@@ -25,13 +25,10 @@
 - Docker Socket Proxy [Docs](./compose/services/socket-proxy/readme.md)
 - Dozzle [Docs](./compose/services/dozzle/readme.md)
 - Flaresolverr [Docs](./compose/services/flaresolverr/readme.md)
+- Gluetun [Docs](./compose/services/gluetun/readme.md)
 - qBittorrent [Docs](./compose/services/qbittorrent/readme.md)
 - qBittorrent-Port [Docs](./compose/services/qbittorrent-port/readme.md)
 - Watchtower [Docs](./compose/services/watchtower/readme.md)
-
-#### Gluetun
-
-Gluetun is a VPN client that supports OpenVPN. You can change the VPN provider by updating the `VPN_PROVIDER` environment variable in the `.env` file.
 
 #### Jellyfin
 
