@@ -16,11 +16,10 @@ The configuration for the various services need various passwords and API Keys t
 
 The current configuration needs the following information
 
-| Name     | Config File                                                 | Service     | Source Location                        |
-| -------- | ----------------------------------------------------------- | ----------- | -------------------------------------- |
-| api_key  | ./config/prowlarr-sub-configs/prowlarr-applications.yml     | readarr     | Settings => General => Api Key         |
-| username | ./config/prowlarr-sub-configs/prowlarr-download-clients.yml | qbittorrent | Tools => Options => Web UI => Username |
-| password | ./config/prowlarr-sub-configs/prowlarr-download-clients.yml | qbittorrent | Tools => Options => Web UI => Password |
+| Name     | Config File                                                 | Service | Source Location                             |
+| -------- | ----------------------------------------------------------- | ------- | ------------------------------------------- |
+| api_key  | ./config/prowlarr-sub-configs/prowlarr-applications.yml     | readarr | Settings => General => Api Key              |
+| password | ./config/prowlarr-sub-configs/prowlarr-download-clients.yml | deluge  | Preferences => Interface => Web UI Password |
 
 ## Connections
 

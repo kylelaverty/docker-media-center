@@ -55,7 +55,7 @@ Torrenting is not an illegal activity. It is the sharing of files between users.
 - Jellyseerr
 - Kapowarr
 - Lidarr
-- Prowlarr
+- Prowlarr [Docs](./compose/services/prowlarr/readme.md)
 - Radarr
 - Radarr-Anime
 - Readarr
@@ -72,10 +72,6 @@ Jellyfin is a media server that allows you to organize and stream your media fil
 Radarr is a service that manages and automates the downloading of movies. It will be used to automatically download movies based on the criteria you set.
 
 Update <AuthenticationMethod>External</AuthenticationMethod> in the `config.xml` file to remove authentication.
-
-#### Prowlarr
-
-Prowlarr is a service that manages indexers and download clients for \*Arr services.
 
 ## Internal Networks
 
