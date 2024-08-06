@@ -1,18 +1,16 @@
 prowlarr:
   settings:
-    download-clients:
+    download_clients:
       definitions:
-        qBittorrent:
-          type: qbittorrent
+        deluge:
+          type: deluge
           enabled: true
           host: localhost
-          port: 8085
+          port: 8112
           use_ssl: false
-          username: admin
-          password: adminadmin
+          password: deluge
           category: prowlarr
           client_priority: last
-          initial_state: start
           tags:
             - "movies"
             - "anime-movies"
