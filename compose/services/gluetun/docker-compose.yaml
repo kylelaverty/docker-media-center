@@ -33,6 +33,9 @@ services:
       - ${JELLYFIN_EXTERNAL_PORT}:${JELLYFIN_CONTAINER_PORT}/tcp # WebUI Portal: Jellyfin (HTTP)
       - ${PROWLARR_EXTERNAL_PORT}:${PROWLARR_CONTAINER_PORT}/tcp # WebUI Portal: Prowlarr (HTTP)
       - ${FLARESOLVERR_EXTERNAL_PORT}:${FLARESOLVERR_CONTAINER_PORT}/tcp # FlareSolverr
+      - 8112:8112/tcp # port for deluge
+      - 6881:6881 # port for deluge
+      - 6881:6881/udp # port for deluge
     volumes:
       - ${INSTALL_DIR}/compose/services/gluetun/config:/config
     environment:

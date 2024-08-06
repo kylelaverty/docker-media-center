@@ -2,16 +2,16 @@ services:
   ###########################################################################
   ###########################################################################
   ##
-  ##  Docker Compose File: qBittorrent (LinuxServer.io)
+  ##  Docker Compose File: deluge (LinuxServer.io)
   ##  Function: Torrent Download Client
   ##
-  ##  Documentation: https://docs.linuxserver.io/images/docker-qbittorrent
+  ##  Documentation: https://docs.linuxserver.io/images/docker-deluge/
   ##
   ###########################################################################
   ###########################################################################
-  qbittorrent:
-    image: lscr.io/linuxserver/qbittorrent:latest
-    container_name: qbittorrent
+  deluge:
+    image: lscr.io/linuxserver/deluge:latest
+    container_name: deluge
     restart: unless-stopped
     security_opt:
       - no-new-privileges:true
@@ -23,15 +23,13 @@ services:
       - /tmp
     volumes:
       - ${TORRENTS_DIR}:/data/torrents
-      - ${INSTALL_DIR}/compose/services/qbittorrent/config:/config
-      - ${INSTALL_DIR}/compose/services/gluetun/config:/config/data_gluetun
+      - ${INSTALL_DIR}/compose/services/deluge/config:/config
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
       - TZ=${TIMESONE}
-      - UMASK_SET=022
-      - WEBUI_PORT=${QBT_EXTERNAL_WEBUI_PORT}
-      - TORRENTING_PORT=6881
+      - DELUGE_LOGLEVEL=error
+      - UMASK=022
     labels:
       - com.centurylinklabs.watchtower.enable=true
       - com.centurylinklabs.watchtower.depends-on=gluetun

@@ -38,10 +38,11 @@ include:
   - ./services/dozzle/docker-compose.yaml
   # MEDIA
   - ./services/jellyfin/docker-compose.yaml
-  - ./services/qbittorrent/docker-compose.yaml
+  #- ./services/qbittorrent/docker-compose.yaml
+  - ./services/deluge/docker-compose.yaml
   - ./services/radarr/docker-compose.yaml
   # UTILITIES
-  - ./services/qbittorrent-port/docker-compose.yaml
+  #- ./services/qbittorrent-port/docker-compose.yaml
   - ./services/buildarr/docker-compose.yaml
   - ./services/prowlarr/docker-compose.yaml
   - ./services/flaresolverr/docker-compose.yaml
