@@ -1,0 +1,19 @@
+radarr:
+  settings:
+    media_management:
+      rename_movies: true
+      replace_illegal_characters: true
+      colon_replacement: space-dash-space
+      movie_folder_format: "{Movie CleanTitle} ({Release Year})"
+      create_missing_movie_folders: false
+      delete_empty_folders: false
+      skip_free_space_check: false
+      minimum_free_space: 100
+      use_hardlinks: true
+      propers_and_repacks: do-not-prefer
+      analyze_video_files: true
+      rescan_folder_after_refresh: always
+      root_folders:
+        delete_unmanaged: true
+        definitions:
+          - /data/media/movies

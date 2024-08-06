@@ -1,0 +1,108 @@
+radarr:
+  instances:
+    radarr-anime:
+      settings:
+        profiles:
+          quality_profiles:
+            delete_unmanaged: true
+            definitions:
+              Remux-1080p - Anime:
+                upgrades_allowed: true
+                qualities:
+                  - name: Remux-1080p
+                    members:
+                      - Bluray-1080p
+                      - Remux-1080p
+                  - name: WEB 1080p
+                    members:
+                      - WEBDL-1080p
+                      - WEBRip-1080p
+                      - HDTV-1080p
+                  - Bluray-720p
+                  - name: WEB 720p
+                    members:
+                      - WEBRip-720p
+                      - WEBDL-720p
+                      - HDTV-720p
+                  - Bluray-576p
+                  - Bluray-480p
+                  - name: WEB 480p
+                    members:
+                      - WEBRip-480p
+                      - WEBDL-480p
+                  - DVD
+                  - SDTV
+                upgrade_until_quality: Remux-1080p
+                minimum_custom_format_score: 0
+                upgrade_until_custom_format_score: 10000
+                custom_formats:
+                  # Anime Movie Versions
+                  - name: anime-bd-tier-01
+                    score: 1400
+                  - name: anime-bd-tier-02
+                    score: 1300
+                  - name: anime-bd-tier-03
+                    score: 1200
+                  - name: anime-bd-tier-04
+                    score: 1100
+                  - name: anime-bd-tier-05
+                    score: 1000
+                  - name: anime-bd-tier-06
+                    score: 900
+                  - name: anime-bd-tier-07
+                    score: 800
+                  - name: anime-bd-tier-08
+                    score: 700
+                  - name: anime-we-tier-01
+                    score: 600
+                  - name: anime-we-tier-02
+                    score: 500
+                  - name: anime-we-tier-03
+                    score: 400
+                  - name: anime-we-tier-04
+                    score: 300
+                  - name: anime-we-tier-05
+                    score: 200
+                  - name: anime-we-tier-06
+                    score: 100
+                  - name: remux-tier-01
+                    score: 1050
+                  - name: remux-tier-02
+                    score: 1000
+                  - name: remux-tier-03
+                    score: 950
+                  - name: web-tier-01
+                    score: 350
+                  - name: web-tier-02
+                    score: 250
+                  - name: web-tier-03
+                    score: 150
+                  - name: anime-raws
+                    score: -10000
+                  - name: anime-lq-groups
+                    score: -10000
+                  - name: unsensored
+                    score: 0
+                  - name: v0
+                    score: -51
+                  - name: v1
+                    score: 1
+                  - name: v2
+                    score: 2
+                  - name: v3
+                    score: 3
+                  - name: v4
+                    score: 4
+                  - name: vrv
+                    score: 10
+                  - name: 10bit
+                    score: 0
+                  - name: anime-dual-audio
+                    score: 0
+                  - name: dubs-only
+                    score: -10000
+                  - name: vostfr
+                    score: -10000
+                  - name: av1
+                    score: -10000
+                language: Original

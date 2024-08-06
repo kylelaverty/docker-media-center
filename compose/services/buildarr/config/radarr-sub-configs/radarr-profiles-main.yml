@@ -1,0 +1,118 @@
+radarr:
+  instances:
+    radarr-main:
+      settings:
+        profiles:
+          quality_profiles:
+            delete_unmanaged: true
+            definitions:
+              HD Bluray + WEB:
+                upgrades_allowed: true
+                qualities:
+                  - Bluray-1080p
+                  - name: WEB 1080p
+                    members:
+                      - WEBRip-1080p
+                      - WEBDL-1080p
+                  - Bluray-720p
+                upgrade_until_quality: Bluray-1080p
+                minimum_custom_format_score: 0
+                upgrade_until_custom_format_score: 10000
+                custom_formats:
+                  # Movie Versions
+                  - name: remaster
+                    score: 25
+                  - name: 4k-remaster
+                    score: 25
+                  - name: criterion-collection
+                    score: 25
+                  - name: masters-of-cinema
+                    score: 25
+                  - name: vinegar-syndrome
+                    score: 25
+                  - name: special-edition
+                    score: 125
+                  - name: imax
+                    score: 800
+                  - name: imax-enhanced
+                    score: 800
+                  # HQ Release Groups
+                  - name: hd-bluray-tier-01
+                    score: 1800
+                  - name: hd-bluray-tier-02
+                    score: 1750
+                  - name: hd-bluray-tier-03
+                    score: 1700
+                  - name: web-tier-01
+                    score: 1650
+                  - name: web-tier-02
+                    score: 1600
+                  - name: web-tier-03
+                    score: 1550
+                  # Misc
+                  - name: repack-proper
+                    score: 5
+                  - name: repack-2
+                    score: 6
+                  - name: repack-3
+                    score: 7
+                  # Unwanted
+                  - name: br-disk
+                    score: -10000
+                  - name: lq
+                    score: -10000
+                  - name: lq-release-title
+                    score: -10000
+                  - name: x265-hd
+                    score: -10000
+                  - name: 3d
+                    score: -10000
+                  - name: extras
+                    score: -10000
+                  - name: av1
+                    score: -10000
+                  # Optional
+                  - name: bad-dual-groups
+                    score: -10000
+                  - name: evo-no-webdl
+                    score: -10000
+                  - name: no-risgroup
+                    score: -10000
+                  - name: obfuscated
+                    score: -10000
+                  - name: retags
+                    score: -10000
+                  - name: scene
+                    score: -10000
+                  # General Streaming Services
+                  - name: amzn
+                    score: 0
+                  - name: atvp
+                    score: 0
+                  - name: bcore
+                    score: 15
+                  - name: crit
+                    score: 20
+                  - name: dsnp
+                    score: 0
+                  - name: hbo
+                    score: 0
+                  - name: hmax
+                    score: 0
+                  - name: hulu
+                    score: 0
+                  - name: it
+                    score: 0
+                  - name: max
+                    score: 0
+                  - name: ma
+                    score: 20
+                  - name: nf
+                    score: 0
+                  - name: pmtp
+                    score: 0
+                  - name: pcok
+                    score: 0
+                  - name: stan
+                    score: 0
+                language: Original

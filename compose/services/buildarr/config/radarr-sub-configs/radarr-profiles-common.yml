@@ -1,0 +1,11 @@
+radarr:
+  settings:
+    profiles:
+      delay_profiles:
+        delete_unmanaged: false
+        definitions:
+          - preferred_protocol: torrent-prefer
+            usenet_delay: 0
+            torrent_delay: 1440
+            bypass_if_highest_quality: true
+            tags: []

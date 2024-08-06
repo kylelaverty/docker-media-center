@@ -1,0 +1,15 @@
+radarr:
+  settings:
+    security:
+      authentication: external
+      authentication_required: enabled
+      username: null
+      password: null
+      certificate_validation: enabled
+    proxy:
+      enable: false
+      bypass_proxy_for_local_addresses: true
+    logging:
+      log_level: INFO
+    analytics:
+      send_anonymous_usage_data: false

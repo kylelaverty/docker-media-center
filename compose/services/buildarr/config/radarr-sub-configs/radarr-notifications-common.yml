@@ -1,0 +1,5 @@
+radarr:
+  settings:
+    notifications:
+      delete_unmanaged: false
+      definitions: {}
