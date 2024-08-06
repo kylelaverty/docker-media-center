@@ -1,11 +1,12 @@
 includes:
-  # - ./radarr-sub-configs/radarr-custom-formats-anime.yml
+  - ./radarr-sub-configs/radarr-custom-formats-anime.yml
   - ./radarr-sub-configs/radarr-custom-formats-main.yml
-  - ./radarr-sub-configs/radarr-download-clients-common.yml
+  - ./radarr-sub-configs/radarr-download-clients-anime.yml
+  - ./radarr-sub-configs/radarr-download-clients-main.yml
   - ./radarr-sub-configs/radarr-general-common.yml
   - ./radarr-sub-configs/radarr-media-management-common.yml
   - ./radarr-sub-configs/radarr-notifications-common.yml
-  # - ./radarr-sub-configs/radarr-profiles-anime.yml
+  - ./radarr-sub-configs/radarr-profiles-anime.yml
   - ./radarr-sub-configs/radarr-profiles-common.yml
   - ./radarr-sub-configs/radarr-profiles-main.yml
   - ./radarr-sub-configs/radarr-quality-common.yml
@@ -33,19 +34,21 @@ radarr:
         # + shared quality settings
         # + shared ui settings
         # + shared notification settings
-    #radrr-anime:
-    #  hostname: gluetun
-    #  port: 7879
-    #  protocol: http
-    #  settings:
-    # + shared general settings
-    # + shared media management settings
-    #    media_management:
-    #      standard_movie_format:
-    #        "{Movie CleanTitle} {(Release Year)} [imdbid-{ImdbId}] - {Edition Tags }{[Custom Formats]}
-    #        {[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}
-    #        { Mediainfo AudioChannels]}{MediaInfo AudioLanguages}[{MediaInfo VideoBitDepth}bit]{[Mediainfo VideoCodec]}{-Release Group}"
-    # + shared profiles settings
-    # + shared quality settings
-    # + shared ui settings
-    # + shared notification settings
+    radarr-anime:
+      hostname: gluetun
+      port: 7879
+      protocol: http
+      settings:
+        # + shared general settings
+        indexers:
+          delete_unmanaged: false
+        # + shared media management settings
+        media_management:
+          standard_movie_format:
+            "{Movie CleanTitle} {(Release Year)} [imdbid-{ImdbId}] - {Edition Tags }{[Custom Formats]}
+            {[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}
+            { Mediainfo AudioChannels]}{MediaInfo AudioLanguages}[{MediaInfo VideoBitDepth}bit]{[Mediainfo VideoCodec]}{-Release Group}"
+        # + shared profiles settings
+        # + shared quality settings
+        # + shared ui settings
+        # + shared notification settings

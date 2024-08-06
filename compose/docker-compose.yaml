@@ -40,6 +40,7 @@ include:
   - ./services/jellyfin/docker-compose.yaml
   - ./services/deluge/docker-compose.yaml
   - ./services/radarr/docker-compose.yaml
+  - ./services/radarr-anime/docker-compose.yaml
   # UTILITIES
   - ./services/buildarr/docker-compose.yaml
   - ./services/prowlarr/docker-compose.yaml

@@ -1,0 +1,16 @@
+radarr:
+  instances:
+    radarr-main:
+      settings:
+        download_clients:
+          delete_unmanaged: true
+          definitions:
+            deluge-client-main:
+              type: deluge
+              enable: true
+              hostname: localhost
+              port: 8112
+              password: deluge
+              category: movies
+              remove_completed_downloads: true
+              priority: 1

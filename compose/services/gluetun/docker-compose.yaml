@@ -27,6 +27,7 @@ services:
       - 8000:8000/tcp # Build-in HTTP control header
       # other container ports
       - ${RADARR_EXTERNAL_PORT}:${RADARR_CONTAINER_PORT}/tcp # WebUI Portal: Radarr (HTTP)
+      - ${RADARR_ANIME_EXTERNAL_PORT}:${RADARR_ANIME_CONTAINER_PORT}/tcp # WebUI Portal: Radarr-Anime (HTTP)
       - ${JELLYFIN_EXTERNAL_PORT}:${JELLYFIN_CONTAINER_PORT}/tcp # WebUI Portal: Jellyfin (HTTP)
       - ${PROWLARR_EXTERNAL_PORT}:${PROWLARR_CONTAINER_PORT}/tcp # WebUI Portal: Prowlarr (HTTP)
       - ${FLARESOLVERR_EXTERNAL_PORT}:${FLARESOLVERR_CONTAINER_PORT}/tcp # FlareSolverr
