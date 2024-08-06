@@ -19,7 +19,7 @@ services:
     depends_on:
       - gluetun
       - prowlarr
-      - qbittorrent
+      - deluge
     volumes:
       - ${INSTALL_DIR}/compose/services/radarr/config:/config
       - ${DATA_DIR}:/data

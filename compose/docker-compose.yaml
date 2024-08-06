@@ -4,7 +4,7 @@
 ##  Docker Compose File: Docker Media Center
 ##  Function: Everything related to managing a media center
 ##
-##  VPN: Qbittorrent, Prowlarr, FlareSolverr
+##  VPN: Deluge, Prowlarr, FlareSolverr
 ##
 ##  Non-VPN: Jellyfin, Radarr, Buildarr, Watchtower
 ##
@@ -38,11 +38,9 @@ include:
   - ./services/dozzle/docker-compose.yaml
   # MEDIA
   - ./services/jellyfin/docker-compose.yaml
-  #- ./services/qbittorrent/docker-compose.yaml
   - ./services/deluge/docker-compose.yaml
   - ./services/radarr/docker-compose.yaml
   # UTILITIES
-  #- ./services/qbittorrent-port/docker-compose.yaml
   - ./services/buildarr/docker-compose.yaml
   - ./services/prowlarr/docker-compose.yaml
   - ./services/flaresolverr/docker-compose.yaml

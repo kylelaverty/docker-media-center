@@ -18,7 +18,7 @@ services:
     network_mode: "service:gluetun"
     depends_on:
       - gluetun
-      - qbittorrent
+      - deluge
     volumes:
       - ${INSTALL_DIR}/compose/services/prowlarr/config:/config
       - "/etc/localtime:/etc/localtime:ro"

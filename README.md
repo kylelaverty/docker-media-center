@@ -35,23 +35,32 @@ Torrenting is not an illegal activity. It is the sharing of files between users.
 | [Gluetun](https://github.com/qdm12/gluetun)                                    | VPN     | OpenVPN client with DNS and firewall configuration |
 | [Jellyfin](https://jellyfin.org/)                                              | Media   | Media server                                       |
 | [Radarr](https://radarr.video/)                                                | Media   | Movie management and automation                    |
-| [Qbittorrent](https://www.qbittorrent.org/)                                    | Torrent | Torrent client                                     |
+| [Deluge](https://deluge-torrent.org/)                                          | Torrent | BitTorrent client                                  |
 | [Prowlarr](https://prowlarr.com/)                                              | Support | Indexer manager with \*Arr Integrations            |
 | [Flaresolverr](https://github.com/FlareSolverr/FlareSolverr)                   | Support | Cloudflare bypass integrated with Prowlarr         |
-| [Qbittorrent-Port](https://github.com/tcj-one/qbittorrent-port-forward-file)   | Support | Qbittorrent port-forward rule updater              |
 | [Dozzle](https://dozzle.dev/)                                                  | Support | Real-time log viewer                               |
 | [Buildarr](https://buildarr.github.io/)                                        | Support | Automated configuration for \*Arr services         |
 | [Watchtower](https://containrrr.dev/watchtower/)                               | Support | Automatic container updates                        |
 
 ### Services Details
 
+- Bazarr
 - Buildarr [Docs](./compose/services/buildarr/readme.md)
+- Deluge [Docs](./compose/services/deluge/readme.md)
 - Docker Socket Proxy [Docs](./compose/services/socket-proxy/readme.md)
 - Dozzle [Docs](./compose/services/dozzle/readme.md)
 - Flaresolverr [Docs](./compose/services/flaresolverr/readme.md)
 - Gluetun [Docs](./compose/services/gluetun/readme.md)
-- qBittorrent [Docs](./compose/services/qbittorrent/readme.md)
-- qBittorrent-Port [Docs](./compose/services/qbittorrent-port/readme.md)
+- Jellyfin
+- Jellyseerr
+- Kapowarr
+- Lidarr
+- Prowlarr
+- Radarr
+- Radarr-Anime
+- Readarr
+- Sonarr
+- Sonarr-Anime
 - Watchtower [Docs](./compose/services/watchtower/readme.md)
 
 #### Jellyfin
@@ -80,7 +89,7 @@ Prowlarr is a service that manages indexers and download clients for \*Arr servi
 | Service      | Type          | Endpoint              |
 | ------------ | ------------- | --------------------- |
 | Radarr       | Reverse Proxy | http://localhost:7878 |
-| Qbittorrent  | Reverse Proxy | http://localhost:8085 |
+| Deluge       | Reverse Proxy | http://localhost:8112 |
 | Dozzle       | Direct        | http://localhost:8082 |
 | Jellyfin     | Reverse Proxy | http://localhost:8096 |
 | Flaresolverr | Reverse Proxy | http://localhost:8191 |
