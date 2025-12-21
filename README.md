@@ -24,6 +24,8 @@ Torrenting is not an illegal activity. It is the sharing of files between users.
 - [References](#references)
 - [License](#license)
 - [Author](#author)
+- [Features to come](#features-to-come)
+- [Random](#random)
 
 ## Services
 
@@ -57,10 +59,8 @@ Torrenting is not an illegal activity. It is the sharing of files between users.
 - Lidarr
 - Prowlarr [Docs](./compose/services/prowlarr/readme.md)
 - Radarr
-- Radarr-Anime
 - Readarr
 - Sonarr
-- Sonarr-Anime
 - Watchtower [Docs](./compose/services/watchtower/readme.md)
 
 #### Jellyfin
@@ -115,3 +115,39 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Author
 
 Created with :heart: by [Kyle Laverty](https://github.com/kylelaverty)
+
+## Features to come
+
+- sonarr
+- sonarr - anime
+- radarr - anime
+- bazarr
+- lidarr
+- readarr
+- Jellyseerr
+
+## Random
+
+- Mylarr
+- https://github.com/filebrowser/filebrowser
+- https://github.com/causefx/Organizr
+- https://github.com/aetaric/checkrr
+- https://github.com/Unpackerr/unpackerr
+- https://github.com/drkno/transcoderr
+- https://github.com/buildarr/buildarr
+- https://homarr.dev/
+- https://traefik.io/traefik/
+- https://github.com/qdm12/files
+- authelia
+- lazylibrarian
+- vaultwarden
+- tdarr
+- Gaps
+- Heimdall
+- Homer
+- https://wiki.servarr.com/
+- tandoor
+- immich
+- https://github.com/AdrienPoupa/docker-compose-nas/blob/master/.github/workflows/main.yml <= validate docker compose pipeline
+- https://github.com/saltyorg/docs/tree/cbdf38ddd9e8cede449809c256f9f04a0024d3f8/docs/apps
+- prometheus and grafana
